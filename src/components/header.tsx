@@ -21,8 +21,8 @@ export function Header() {
             Get Involved
           </a>
         </nav>
-        <Button size="sm" asChild>
-          <a href="#get-involved">Support Us</a>
+        <Button size="sm" render={<a href="#get-involved" />}>
+          Support Us
         </Button>
       </div>
     </header>

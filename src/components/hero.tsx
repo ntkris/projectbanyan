@@ -18,11 +18,11 @@ export function Hero() {
           first step toward change.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" asChild>
-            <a href="#get-involved">Get Involved</a>
+          <Button size="lg" render={<a href="#get-involved" />}>
+            Get Involved
           </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="#mission">Learn More</a>
+          <Button size="lg" variant="outline" render={<a href="#mission" />}>
+            Learn More
           </Button>
         </div>
       </div>

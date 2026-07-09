@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: banyan
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    domains:
+      - projectbanyan.org
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
