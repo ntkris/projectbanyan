@@ -15,11 +15,11 @@ const stanzas = [
 
 export function Poem() {
   return (
-    <section id="in-their-words" className="py-24 bg-accent/40">
+    <section id="in-his-words" className="py-24 bg-accent/40">
       <figure className="max-w-2xl mx-auto px-6">
         <div className="text-center">
           <p className="text-sm font-medium text-primary tracking-wide uppercase">
-            In their own words
+            In his own words
           </p>
           <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
         </div>
@@ -35,8 +35,13 @@ export function Poem() {
             </p>
           ))}
         </blockquote>
-        <figcaption className="mt-10 text-sm text-muted-foreground text-left sm:text-center">
-          — Written by a friend of Project Banyan living with Parkinson's
+        <figcaption className="mt-10 text-left sm:text-center">
+          <span className="text-sm font-medium text-foreground">
+            Dr Nandakumar Jairam
+          </span>
+          <span className="block mt-1 text-sm text-muted-foreground">
+            Living with Parkinson's
+          </span>
         </figcaption>
       </figure>
     </section>

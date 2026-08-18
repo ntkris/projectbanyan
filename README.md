@@ -47,7 +47,7 @@ src/
     header.tsx             sticky nav with the banyan tree mark
     hero.tsx               headline and calls to action
     mission.tsx            why Project Banyan exists
-    poem.tsx               a poem by someone living with Parkinson's
+    poem.tsx               a poem by Dr Nandakumar Jairam
     who-we-support.tsx     patients, carers, doctors, researchers
     get-involved.tsx       closing invitation
     footer.tsx             site footer
