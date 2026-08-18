@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Mission } from "@/components/mission"
+import { Poem } from "@/components/poem"
 import { WhoWeSupport } from "@/components/who-we-support"
 import { GetInvolved } from "@/components/get-involved"
 import { Footer } from "@/components/footer"
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero />
         <Mission />
+        <Poem />
         <WhoWeSupport />
         <GetInvolved />
       </main>
