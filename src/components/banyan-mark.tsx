@@ -1,8 +1,13 @@
 /**
- * The Project Banyan mark. A banyan drops aerial roots that reach the ground
- * and thicken into new trunks, so one tree ends up standing on many supports
- * and slowly becomes a grove. Here: a wide, low canopy on five landed columns,
- * with two roots still on their way down.
+ * The Project Banyan mark. A banyan drops aerial roots from its canopy; they
+ * hang at every length and a few thicken into new trunks, so one tree ends up
+ * holding itself up on many supports. The mark is that canopy in section — a
+ * wide crown combed from below into a curtain of roots, two of them broad
+ * enough to have landed.
+ *
+ * Geometry is generated, not hand-tuned: see the emitter in the logo notes.
+ * Roots are cut out of the crown with the even-odd fill rule, so the mark is
+ * a single closed silhouette that inverts cleanly on any background.
  */
 export function BanyanMark({ className }: { className?: string }) {
   return (
@@ -14,15 +19,7 @@ export function BanyanMark({ className }: { className?: string }) {
       role="img"
       aria-label="Project Banyan"
     >
-      <path d="M2.95 27A30 12 0 1 1 61.05 27C47.98 30.5 16.02 30.5 2.95 27Z" />
-      <path d="M7.5 19C7.5 27 6.9 43 6.9 55L11.1 55C11.1 43 10.5 27 10.5 19Z" />
-      <path d="M14.5 19C14.5 27 13.8 43 13.8 55L19.2 55C19.2 43 18.5 27 18.5 19Z" />
-      <path d="M29.5 19C29.5 27 28.6 43 28.6 55L35.4 55C35.4 43 34.5 27 34.5 19Z" />
-      <path d="M45.5 19C45.5 27 44.8 43 44.8 55L50.2 55C50.2 43 49.5 27 49.5 19Z" />
-      <path d="M53.5 19C53.5 27 52.9 43 52.9 55L57.1 55C57.1 43 56.5 27 56.5 19Z" />
-      {/* Two roots still descending, not yet landed. */}
-      <path d="M22.8 19C22.8 27 22.8 28 22.8 38.8A1.2 1.2 0 0 0 25.2 38.8C25.2 28 25.2 27 25.2 19Z" />
-      <path d="M38.8 19C38.8 27 38.8 30 38.8 40.8A1.2 1.2 0 0 0 41.2 40.8C41.2 30 41.2 27 41.2 19Z" />
+      <path d="M4 24A28 21 0 0 1 60 24A28 21 0 0 1 56.5 34.17L55.7 21L53.3 21L52.5 38.3A28 21 0 0 1 51 39.43L50.2 29L47.8 29L47 41.73A28 21 0 0 1 45 42.6L44.2 18L41.8 18L41 43.89A28 21 0 0 1 38 44.51L37.2 25L34.8 25L34 44.95A28 21 0 0 1 31.5 45L30.7 14L28.3 14L27.5 44.73A28 21 0 0 1 25 44.33L24.2 28L21.8 28L21 43.31A28 21 0 0 1 18 42.19L17.2 17L14.8 17L14 40.09A28 21 0 0 1 12 38.7L11.2 23L8.8 23L8 34.82A28 21 0 0 1 4 24Z" />
     </svg>
   )
 }
