@@ -45,7 +45,7 @@ src/
   index.css                Tailwind import and design tokens (colors, radii, fonts)
   components/
     header.tsx             sticky nav
-    banyan-mark.tsx        the logo: a banyan crown combed into aerial roots
+    banyan-mark.tsx        the logo: a banyan — crown, hanging aerial roots, one landed trunk
     hero.tsx               headline and calls to action
     mission.tsx            why Project Banyan exists
     poem.tsx               a poem by Dr Nandakumar Jairam

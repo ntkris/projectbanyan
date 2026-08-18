@@ -1,13 +1,16 @@
 /**
- * The Project Banyan mark. A banyan drops aerial roots from its canopy; they
- * hang at every length and a few thicken into new trunks, so one tree ends up
- * holding itself up on many supports. The mark is that canopy in section — a
- * wide crown combed from below into a curtain of roots, two of them broad
- * enough to have landed.
+ * The Project Banyan mark.
  *
- * Geometry is generated, not hand-tuned: see the emitter in the logo notes.
- * Roots are cut out of the crown with the even-odd fill rule, so the mark is
- * a single closed silhouette that inverts cleanly on any background.
+ * A banyan drops aerial roots from its canopy. Most hang in mid-air, still on
+ * their way down; the ones that reach the ground thicken into trunks, until a
+ * single tree is holding itself up on many supports and has become a grove.
+ *
+ * So: a broad billowing crown, a curtain of roots hanging at every length
+ * beneath it, and one trunk that has landed and flared where it meets the
+ * ground. The roots are notched out of the crown's underside and traced as
+ * part of one closed outline, so the whole silhouette is a single path and
+ * inverts cleanly on any background. The foliage masses are separate circles
+ * in the same fill, which read as one shape.
  */
 export function BanyanMark({ className }: { className?: string }) {
   return (
@@ -19,7 +22,11 @@ export function BanyanMark({ className }: { className?: string }) {
       role="img"
       aria-label="Project Banyan"
     >
-      <path d="M4 24A28 21 0 0 1 60 24A28 21 0 0 1 56.5 34.17L55.7 21L53.3 21L52.5 38.3A28 21 0 0 1 51 39.43L50.2 29L47.8 29L47 41.73A28 21 0 0 1 45 42.6L44.2 18L41.8 18L41 43.89A28 21 0 0 1 38 44.51L37.2 25L34.8 25L34 44.95A28 21 0 0 1 31.5 45L30.7 14L28.3 14L27.5 44.73A28 21 0 0 1 25 44.33L24.2 28L21.8 28L21 43.31A28 21 0 0 1 18 42.19L17.2 17L14.8 17L14 40.09A28 21 0 0 1 12 38.7L11.2 23L8.8 23L8 34.82A28 21 0 0 1 4 24Z" />
+      <path d="M3 23A29 15 0 0 1 61 23A29 15 0 0 1 56.4 31.11L55.9 51Q55 52.26 54.1 51L53.6 27L50.5 27L50 43Q49 44.4 48 43L47.5 21L44.1 21L43.6 48Q42.5 49.54 41.4 48L40.9 28L36.75 28L37.5 57L26.5 57L27.25 26L23.1 26L22.6 45Q21.5 46.54 20.4 45L19.9 20L16.5 20L16 50Q15 51.4 14 50L13.5 27L10.5 27L10 44Q9 45.4 8 44L7.5 31.03A29 15 0 0 1 3 23Z" />
+      <circle cx="12" cy="18" r="9" />
+      <circle cx="26" cy="13" r="11" />
+      <circle cx="42" cy="14" r="10.5" />
+      <circle cx="53" cy="19" r="8" />
     </svg>
   )
 }
