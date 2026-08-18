@@ -1,26 +1,35 @@
 import { BanyanMark } from "@/components/banyan-mark"
 import { Button } from "@/components/ui/button"
 
+const links = [
+  { href: "#mission", label: "Mission" },
+  { href: "#who-we-support", label: "Who We Support" },
+  { href: "#get-involved", label: "Get Involved" },
+]
+
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 text-foreground no-underline">
-          <BanyanMark className="h-8 w-8 text-primary" />
-          <span className="text-lg font-semibold tracking-tight">
+    <header className="sticky top-0 z-50 border-b border-foreground bg-background">
+      <div className="mx-auto flex h-20 max-w-page items-center gap-8 px-6">
+        <a
+          href="/"
+          className="mr-auto flex h-12 items-center gap-2.5 text-foreground no-underline"
+        >
+          <BanyanMark className="h-9 w-9 text-primary" />
+          <span className="font-serif text-h3 font-semibold tracking-tight">
             Project Banyan
           </span>
         </a>
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="#mission" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
-            Mission
-          </a>
-          <a href="#who-we-support" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
-            Who We Support
-          </a>
-          <a href="#get-involved" className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline">
-            Get Involved
-          </a>
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="inline-flex h-12 items-center text-small text-foreground no-underline underline-offset-4 hover:underline"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
         <Button size="sm" render={<a href="#get-involved" />}>
           Support Us

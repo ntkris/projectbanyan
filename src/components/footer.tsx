@@ -1,40 +1,42 @@
+import { BanyanMark } from "@/components/banyan-mark"
+
+const links = [
+  { href: "#mission", label: "Mission" },
+  { href: "#who-we-support", label: "Who We Support" },
+  { href: "#get-involved", label: "Get Involved" },
+]
+
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="border-t border-foreground bg-accent">
+      <div className="mx-auto max-w-page px-6 py-16">
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
-            <p className="font-semibold text-foreground">Project Banyan</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Creating impact for people with Parkinson's.
+            <div className="flex items-center gap-2.5">
+              <BanyanMark className="h-8 w-8 text-primary" />
+              <p className="font-serif text-h3 font-semibold tracking-tight">
+                Project Banyan
+              </p>
+            </div>
+            <p className="mt-3 max-w-measure text-small text-muted-foreground">
+              Creating impact for people living with Parkinson's.
             </p>
           </div>
-          <nav className="flex gap-6">
-            <a
-              href="#mission"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline"
-            >
-              Mission
-            </a>
-            <a
-              href="#who-we-support"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline"
-            >
-              Who We Support
-            </a>
-            <a
-              href="#get-involved"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline"
-            >
-              Get Involved
-            </a>
+          <nav className="flex flex-col gap-1">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="inline-flex h-12 items-center text-small text-foreground no-underline underline-offset-4 hover:underline"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
         </div>
-        <div className="mt-8 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Project Banyan. All rights reserved.
-          </p>
-        </div>
+        <p className="mt-12 max-w-measure border-t border-border pt-8 text-small text-muted-foreground">
+          &copy; {new Date().getFullYear()} Project Banyan. All rights reserved.
+        </p>
       </div>
     </footer>
   )

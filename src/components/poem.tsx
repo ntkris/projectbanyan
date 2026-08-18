@@ -1,3 +1,5 @@
+import { Section } from "@/components/section"
+
 const stanzas = [
   [
     "I boarded this flight some years ago.",
@@ -15,35 +17,32 @@ const stanzas = [
 
 export function Poem() {
   return (
-    <section id="in-his-words" className="py-24 bg-accent/40">
-      <figure className="max-w-2xl mx-auto px-6">
-        <div className="text-center">
-          <p className="text-sm font-medium text-primary tracking-wide uppercase">
-            In his own words
-          </p>
-          <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
-        </div>
-        <blockquote className="mt-10 space-y-6 text-left sm:text-center">
+    <Section id="in-his-words" tone="band">
+      <figure className="max-w-measure">
+        <p className="text-label uppercase text-muted-foreground">
+          In his own words
+        </p>
+        <blockquote className="mt-8 space-y-7">
           {stanzas.map((stanza) => (
-            <p key={stanza[0]} className="text-lg md:text-xl text-foreground/90 italic">
+            <p key={stanza[0]} className="font-serif text-lede">
               {stanza.map((line) => (
                 // Hanging indent so a line that wraps still reads as one line of verse.
-                <span key={line} className="block leading-loose pl-6 -indent-6 sm:pl-0 sm:indent-0">
+                <span key={line} className="block pl-7 -indent-7 leading-relaxed">
                   {line}
                 </span>
               ))}
             </p>
           ))}
         </blockquote>
-        <figcaption className="mt-10 text-left sm:text-center">
-          <span className="text-sm font-medium text-foreground">
+        <figcaption className="mt-9 border-t border-foreground pt-5">
+          <span className="font-serif text-h3 font-semibold">
             Dr Nandakumar Jairam
           </span>
-          <span className="block mt-1 text-sm text-muted-foreground">
+          <span className="mt-1 block text-small text-muted-foreground">
             Living with Parkinson's
           </span>
         </figcaption>
       </figure>
-    </section>
+    </Section>
   )
 }

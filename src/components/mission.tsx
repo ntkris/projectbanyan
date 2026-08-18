@@ -1,46 +1,52 @@
+import { Prose, Section, SectionHeading } from "@/components/section"
+
+const drivers = [
+  {
+    title: "Credible information, freely available",
+    body: "What a diagnosis actually means, written to be understood rather than to be correct in front of other clinicians.",
+  },
+  {
+    title: "The people behind the diagnosis",
+    body: "Parkinson's is lived by families, not only by patients. Carers need to know what is happening and what comes next.",
+  },
+  {
+    title: "Communities that share the journey",
+    body: "Most of what helps day to day was learned by someone else first. Connecting people shortens that road.",
+  },
+  {
+    title: "Research that moves the needle",
+    body: "Work that changes care deserves to be visible outside the journals it was published in.",
+  },
+]
+
 export function Mission() {
   return (
-    <section id="mission" className="py-24 bg-background">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-            Our Mission
-          </h2>
-          <div className="mt-4 h-1 w-16 bg-primary rounded-full mx-auto" />
-        </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Parkinson's disease affects millions worldwide — not just those
-              diagnosed, but everyone around them. Families adapt. Routines
-              change. Questions multiply.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Project Banyan exists to bridge the gap between what people
-              experience and what they understand. We believe that better
-              knowledge leads to better decisions, better care, and better lives.
-            </p>
+    <Section id="mission">
+      <SectionHeading label="Our mission">
+        Bridging what people live and what they understand
+      </SectionHeading>
+
+      <Prose className="mt-10">
+        <p className="text-muted-foreground">
+          Parkinson's disease affects millions worldwide — not just those
+          diagnosed, but everyone around them. Families adapt. Routines change.
+          Questions multiply.
+        </p>
+        <p className="mt-5 text-muted-foreground">
+          Project Banyan exists to close the gap between what people experience
+          and what they understand. Better knowledge leads to better decisions,
+          better care, and better lives.
+        </p>
+      </Prose>
+
+      <dl className="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-2">
+        {drivers.map((driver) => (
+          <div key={driver.title} className="border-t border-foreground pt-5">
+            <dt className="font-serif text-h3 font-semibold">{driver.title}</dt>
+            <dd className="mt-2.5 text-muted-foreground">{driver.body}</dd>
           </div>
-          <div className="bg-muted rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6">
-              What drives us
-            </h3>
-            <ul className="space-y-4">
-              {[
-                "Making credible information accessible to everyone",
-                "Supporting the people behind the diagnosis",
-                "Connecting communities that share this journey",
-                "Amplifying research that moves the needle",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        ))}
+      </dl>
+    </Section>
   )
 }
