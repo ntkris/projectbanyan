@@ -1,8 +1,8 @@
 /**
- * The Project Banyan mark. A banyan drops aerial roots that thicken into new
- * trunks, so one tree ends up holding itself up on many supports and slowly
- * becomes a grove — hence the wide crown on five stems rather than one. The
- * canopy dips between the stems so they grow out of the foliage.
+ * The Project Banyan mark. A banyan drops aerial roots that reach the ground
+ * and thicken into new trunks, so one tree ends up standing on many supports
+ * and slowly becomes a grove. Here: a wide, low canopy on five landed columns,
+ * with two roots still on their way down.
  */
 export function BanyanMark({ className }: { className?: string }) {
   return (
@@ -14,12 +14,15 @@ export function BanyanMark({ className }: { className?: string }) {
       role="img"
       aria-label="Project Banyan"
     >
-      <path d="M3 27C1 19 7 12 16 12C22 6 33 6 39 11C48 7 58 12 58 18C63 20 63 27 60 30Q56.5 37.5 53 32Q48.5 38 44 32.5Q38 38.5 32 33Q26 38.5 20 32.5Q15.5 38 11 32Q7 37.5 3 27Z" />
-      <path d="M29 32C29 40 27.9 44 27.5 55L36.5 55C36.1 44 35 40 35 32Z" />
-      <path d="M18.2 32C18.2 40 17.65 44 17.25 55L22.75 55C22.35 44 21.8 40 21.8 32Z" />
-      <path d="M42.2 32C42.2 40 41.65 44 41.25 55L46.75 55C46.35 44 45.8 40 45.8 32Z" />
-      <path d="M9.6 32C9.6 40 9.3 44 8.9 55L13.1 55C12.7 44 12.4 40 12.4 32Z" />
-      <path d="M51.6 32C51.6 40 51.3 44 50.9 55L55.1 55C54.7 44 54.4 40 54.4 32Z" />
+      <path d="M2.95 27A30 12 0 1 1 61.05 27C47.98 30.5 16.02 30.5 2.95 27Z" />
+      <path d="M7.5 19C7.5 27 6.9 43 6.9 55L11.1 55C11.1 43 10.5 27 10.5 19Z" />
+      <path d="M14.5 19C14.5 27 13.8 43 13.8 55L19.2 55C19.2 43 18.5 27 18.5 19Z" />
+      <path d="M29.5 19C29.5 27 28.6 43 28.6 55L35.4 55C35.4 43 34.5 27 34.5 19Z" />
+      <path d="M45.5 19C45.5 27 44.8 43 44.8 55L50.2 55C50.2 43 49.5 27 49.5 19Z" />
+      <path d="M53.5 19C53.5 27 52.9 43 52.9 55L57.1 55C57.1 43 56.5 27 56.5 19Z" />
+      {/* Two roots still descending, not yet landed. */}
+      <path d="M22.8 19C22.8 27 22.8 28 22.8 38.8A1.2 1.2 0 0 0 25.2 38.8C25.2 28 25.2 27 25.2 19Z" />
+      <path d="M38.8 19C38.8 27 38.8 30 38.8 40.8A1.2 1.2 0 0 0 41.2 40.8C41.2 30 41.2 27 41.2 19Z" />
     </svg>
   )
 }
