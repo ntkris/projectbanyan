@@ -45,7 +45,7 @@ src/
   index.css                Tailwind import and design tokens (colors, radii, fonts)
   components/
     header.tsx             sticky nav
-    banyan-mark.tsx        the logo: banyan tree with a tulip in negative space
+    banyan-mark.tsx        the logo: a banyan crown on five prop-root trunks
     hero.tsx               headline and calls to action
     mission.tsx            why Project Banyan exists
     poem.tsx               a poem by Dr Nandakumar Jairam
