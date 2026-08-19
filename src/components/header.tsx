@@ -10,13 +10,13 @@ const links = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-foreground bg-background">
-      <div className="mx-auto flex h-20 max-w-page items-center gap-8 px-6">
+      <div className="mx-auto flex h-20 max-w-page items-center gap-3 px-6 sm:gap-8">
         <a
           href="/"
           className="mr-auto flex h-12 items-center gap-2.5 text-foreground no-underline"
         >
-          <BanyanMark className="h-9 w-9 text-primary" />
-          <span className="font-serif text-h3 font-semibold tracking-tight">
+          <BanyanMark className="h-8 w-8 shrink-0 text-primary sm:h-9 sm:w-9" />
+          <span className="whitespace-nowrap font-serif text-body font-semibold tracking-tight sm:text-h3">
             Project Banyan
           </span>
         </a>
@@ -31,9 +31,14 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <Button size="sm" render={<a href="#get-involved" />}>
-          Support us
-        </Button>
+        {/* Below 360px the name, the mark and a button cannot all fit without
+            shrinking the name past the point of being readable. The name wins:
+            this button repeats the Get involved section further down. */}
+        <div className="hidden min-[360px]:flex">
+          <Button size="sm" render={<a href="#get-involved" />}>
+            Support us
+          </Button>
+        </div>
       </div>
     </header>
   )

@@ -24,10 +24,10 @@ export function Poem() {
         </p>
         <blockquote className="mt-8 space-y-7">
           {stanzas.map((stanza) => (
-            <p key={stanza[0]} className="font-serif text-lede">
+            <p key={stanza[0]} className="font-serif text-body sm:text-lede">
               {stanza.map((line) => (
                 // Hanging indent so a line that wraps still reads as one line of verse.
-                <span key={line} className="block pl-7 -indent-7 leading-relaxed">
+                <span key={line} className="block text-balance pl-5 -indent-5 leading-relaxed sm:pl-7 sm:-indent-7">
                   {line}
                 </span>
               ))}
