@@ -82,6 +82,8 @@ for (const file of copyFiles) {
         notes.push(`${file}  ${list.length}-word sentence: "${sentence.trim()}"`)
       }
       for (const word of list) {
+        // An address or a link is not a word anyone has to read aloud.
+        if (/@|https?:|\.(org|com|net|uk)\b/.test(word)) continue
         const letters = word.replace(/[^A-Za-z]/g, "")
         if (letters.length >= LONG_WORD_LETTERS) {
           notes.push(`${file}  long word "${letters}". Is there a shorter one?`)
