@@ -3,7 +3,7 @@ import { extendTailwindMerge } from "tailwind-merge"
 
 /**
  * The type scale in index.css is named semantically (`text-body`, `text-lede`),
- * which tailwind-merge would otherwise read as *colour* utilities — so it would
+ * which tailwind-merge would otherwise read as colour utilities. It would then
  * treat `text-body` and `text-primary-foreground` as conflicting and drop one.
  * Registering them as font sizes keeps size and colour independent.
  */

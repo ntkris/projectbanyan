@@ -2,8 +2,8 @@ import { BanyanMark } from "@/components/banyan-mark"
 
 const links = [
   { href: "#mission", label: "Mission" },
-  { href: "#who-we-support", label: "Who We Support" },
-  { href: "#get-involved", label: "Get Involved" },
+  { href: "#who-we-support", label: "Who we help" },
+  { href: "#get-involved", label: "Get involved" },
 ]
 
 export function Footer() {
@@ -19,7 +19,7 @@ export function Footer() {
               </p>
             </div>
             <p className="mt-3 max-w-measure text-small text-muted-foreground">
-              Creating impact for people living with Parkinson's.
+              Clear information for people living with Parkinson's.
             </p>
           </div>
           <nav className="flex flex-col gap-1">

@@ -13,7 +13,7 @@
 /* ── Type, measure and rhythm ──────────────────────────────────────────────
    Sizes are named for their job, not their scale position, so the floors are
    hard to break by accident. `text-body` is the floor for anything anyone has
-   to read: 19px at 1.7. `text-small` is for captions and labels — never prose. */
+   to read: 19px at 1.7. `text-small` is for captions and labels, never prose. */
 @theme {
   --font-sans: "Public Sans Variable", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Literata Variable", Georgia, "Times New Roman", serif;
@@ -42,7 +42,7 @@
   --text-h1--line-height: 1.1;
 
   /* Hypometric saccades make the return sweep to the next line unreliable, so
-     prose is capped well short of the usual 65–75 characters. */
+     prose is capped well short of the usual 65 to 75 characters. */
   --container-measure: 62ch;
   --container-page: 68rem;
 
@@ -100,8 +100,8 @@
      muted-foreground  #4A4F47    8.1:1   (7.5:1 on --accent)
      primary  ivy      #26543A    8.4:1   (and 8.4:1 reversed, paper on ivy)
      secondary slate   #3F5069    7.9:1
-     border-strong     #85897A    3.5:1   — control outlines only
-     border            #DFE1D7            — decorative rules, carries no meaning
+     border-strong     #85897A    3.5:1   control outlines only
+     border            #DFE1D7            decorative rules, carry no meaning
 
    Do not lighten any of these without re-checking the ratio. */
 :root {

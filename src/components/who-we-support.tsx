@@ -2,37 +2,37 @@ import { Section, SectionHeading } from "@/components/section"
 
 const groups = [
   {
-    title: "Patients",
+    title: "People with Parkinson's",
     description:
-      "People living with Parkinson's deserve clear, honest information about their condition — from the earliest signs through to managing an ordinary day.",
+      "You deserve clear, honest information about your own condition. We cover the first signs, the treatments, and how to get through an ordinary day.",
   },
   {
-    title: "Carers",
+    title: "Carers and families",
     description:
-      "The people who show up every day: family, friends, caregivers. We help them understand what is happening now and prepare for what comes next.",
+      "Family, friends and carers show up every day. We help you understand what is happening now, and get ready for what comes next.",
   },
   {
     title: "Doctors",
     description:
-      "Clinicians on the front line of care. We build resources that help them explain complex information to patients and their families.",
+      "Doctors have very little time with each patient. We build clear resources they can share with patients and families.",
   },
   {
     title: "Researchers",
     description:
-      "The scientists working to understand and treat Parkinson's. We help make their work visible and their findings legible outside the field.",
+      "Scientists are working to understand and treat Parkinson's. We help share what they find, in words everyone can follow.",
   },
 ]
 
 export function WhoWeSupport() {
   return (
     <Section id="who-we-support">
-      <SectionHeading label="Who we support">
+      <SectionHeading label="Who we help">
         Four groups, one condition
       </SectionHeading>
 
       <p className="mt-10 max-w-measure text-muted-foreground">
-        Parkinson's touches many lives. Our work reaches across the whole
-        ecosystem of care, not only the person holding the diagnosis.
+        Parkinson's affects many people, not only the person who has it. We
+        work with all of them.
       </p>
 
       <div className="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-2">

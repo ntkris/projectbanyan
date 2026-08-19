@@ -1,9 +1,8 @@
 # Project Banyan
 
-The website for **Project Banyan** — a Parkinson's initiative creating impact for
-people living with the disease, and for the carers, doctors, and researchers
-around them. We start with knowledge and awareness, because understanding is the
-first step toward change.
+The website for **Project Banyan**. We help people living with Parkinson's, the
+families who care for them, and the doctors and scientists working on it. We
+start by making information clear and easy to find.
 
 Live at **[projectbanyan.org](https://projectbanyan.org)**.
 
@@ -34,19 +33,20 @@ npm run dev      # start the dev server at http://localhost:5173
 | `npm run dev` | Dev server with hot module replacement |
 | `npm run build` | Type-check (`tsc -b`) and build to `dist/` |
 | `npm run preview` | Serve the production build locally |
-| `npm run lint` | Run ESLint across the project |
+| `npm run lint` | Run ESLint and the copy check |
+| `npm run check:copy` | Check the writing rules in `CLAUDE.md` |
 
 ## Project structure
 
 ```
 src/
-  App.tsx                  page composition — sections render in this order
+  App.tsx                  page composition. Sections render in this order
   main.tsx                 React entry point
   index.css                Tailwind import and design tokens (colors, radii, fonts)
   components/
-    section.tsx            Section / SectionHeading / Prose — the page shell
+    section.tsx            Section / SectionHeading / Prose, the page shell
     header.tsx             sticky nav
-    banyan-mark.tsx        the logo: a banyan — crown, hanging aerial roots, one landed trunk
+    banyan-mark.tsx        the logo: a banyan crown, hanging aerial roots, one landed trunk
     hero.tsx               headline and calls to action
     mission.tsx            why Project Banyan exists
     poem.tsx               a poem by Dr Nandakumar Jairam
@@ -59,8 +59,18 @@ public/                    static assets served as-is
 ```
 
 The site is a single page. To add, remove, or reorder a section, edit the list of
-components in `src/App.tsx` — each section owns its own `id` for anchor links,
+components in `src/App.tsx`. Each section owns its own `id` for anchor links,
 and the nav links in `header.tsx` and `footer.tsx` point at those ids.
+
+## Writing and design rules
+
+**`CLAUDE.md` is the source of truth for how this site is written and built.**
+Read it before adding copy or a component. It covers who reads the site, the
+writing rules, and the accessibility floors. The parts a machine can check are
+enforced by `npm run lint`.
+
+The short version: no em dashes, short sentences, common words, and never go
+below the floors in the table further down.
 
 ## Design system
 
@@ -69,9 +79,9 @@ rather than a marketing page. A reading serif for headings, rules instead of
 cards, a tight measure, and no elevation anywhere. If you are adding a section,
 reach for a rule before you reach for a box.
 
-Everything routes through three primitives in `src/components/section.tsx` —
-`Section`, `SectionHeading` and `Prose` — so page width, vertical rhythm and the
-heading treatment are decided once. Use them rather than hand-rolling a
+Everything routes through three primitives in `src/components/section.tsx`:
+`Section`, `SectionHeading` and `Prose`. Page width, vertical rhythm and the
+heading treatment are therefore decided once. Use them rather than hand-rolling a
 `<section>`, or the containers drift apart again.
 
 ### Legibility floors
@@ -90,7 +100,7 @@ downward makes the site harder to read for the people it is for**.
 | Font weight | 400 minimum | Thin strokes vanish at the affected spatial frequencies |
 | Targets | 44px minimum, 48px default | Tremor and bradykinesia |
 | Focus | 3px outline, never suppressed | Keyboard and switch access |
-| Colour | never load-bearing on its own | Blue–yellow discrimination is affected |
+| Colour | never load-bearing on its own | Blue and yellow are harder to tell apart |
 
 The whole page currently sits at **7.46:1 or better**, and the widest column of
 prose is 62 characters.
@@ -100,7 +110,7 @@ prose is 62 characters.
 Sizes are named for their job, not their position in a scale, so the floor is
 hard to break by accident: `text-label`, `text-small`, `text-body`, `text-lede`,
 `text-h3`, `text-h2`, `text-h1`. Only `text-label` (16px, uppercase, tracked)
-sits below the 17px mark, and it is reserved for section eyebrows — never prose.
+sits below the 17px mark, and it is reserved for section eyebrows, never prose.
 
 ### Colour
 
@@ -114,7 +124,7 @@ if you touch any value that carries text.
 | `--muted-foreground` | `#4A4F47` | 8.1:1 (7.5:1 on `--accent`) |
 | `--primary` (ivy) | `#26543A` | 8.4:1, and 8.4:1 reversed |
 | `--secondary` (slate) | `#3F5069` | 7.9:1 |
-| `--border-strong` | `#85897A` | 3.5:1 — control outlines only |
+| `--border-strong` | `#85897A` | 3.5:1, control outlines only |
 | `--border` | `#DFE1D7` | decorative rules; carries no meaning |
 
 ### Dark mode
@@ -128,5 +138,5 @@ tokens. With no `.dark` palette defined, the variant simply never activates.
 
 `render.yaml` is a Render blueprint describing the static site: it runs
 `npm ci && npm run build`, publishes `dist/`, serves `projectbanyan.org`, and
-rewrites all routes to `index.html`. Pushing to the deployment branch is enough —
+rewrites all routes to `index.html`. Pushing to the deployment branch is enough.
 Render picks up the blueprint and builds from it.

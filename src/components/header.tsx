@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button"
 
 const links = [
   { href: "#mission", label: "Mission" },
-  { href: "#who-we-support", label: "Who We Support" },
-  { href: "#get-involved", label: "Get Involved" },
+  { href: "#who-we-support", label: "Who we help" },
+  { href: "#get-involved", label: "Get involved" },
 ]
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
           ))}
         </nav>
         <Button size="sm" render={<a href="#get-involved" />}>
-          Support Us
+          Support us
         </Button>
       </div>
     </header>

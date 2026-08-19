@@ -2,20 +2,20 @@ import { Prose, Section, SectionHeading } from "@/components/section"
 
 const drivers = [
   {
-    title: "Credible information, freely available",
-    body: "What a diagnosis actually means, written to be understood rather than to be correct in front of other clinicians.",
+    title: "Information you can trust",
+    body: "We explain what a diagnosis means in plain words. It is free to read, and you do not need a medical background to follow it.",
   },
   {
-    title: "The people behind the diagnosis",
-    body: "Parkinson's is lived by families, not only by patients. Carers need to know what is happening and what comes next.",
+    title: "Help for families too",
+    body: "Parkinson's changes life for the whole family. We help carers understand what is happening now, and what may come next.",
   },
   {
-    title: "Communities that share the journey",
-    body: "Most of what helps day to day was learned by someone else first. Connecting people shortens that road.",
+    title: "People who understand",
+    body: "Most of what helps day to day was worked out by someone else first. We connect people so nobody has to start from scratch.",
   },
   {
-    title: "Research that moves the needle",
-    body: "Work that changes care deserves to be visible outside the journals it was published in.",
+    title: "Research made clear",
+    body: "Important research often stays locked inside journals. We explain the work that could change how people are treated.",
   },
 ]
 
@@ -23,19 +23,19 @@ export function Mission() {
   return (
     <Section id="mission">
       <SectionHeading label="Our mission">
-        Bridging what people live and what they understand
+        We make Parkinson's easier to understand
       </SectionHeading>
 
       <Prose className="mt-10">
         <p className="text-muted-foreground">
-          Parkinson's disease affects millions worldwide — not just those
-          diagnosed, but everyone around them. Families adapt. Routines change.
-          Questions multiply.
+          Parkinson's affects millions of people around the world. It affects
+          their families too. Daily routines change. New questions come up all
+          the time.
         </p>
         <p className="mt-5 text-muted-foreground">
-          Project Banyan exists to close the gap between what people experience
-          and what they understand. Better knowledge leads to better decisions,
-          better care, and better lives.
+          Many people live with Parkinson's for years without a clear
+          explanation of it. We want to change that. When you understand what
+          is happening, it is easier to make good choices about your care.
         </p>
       </Prose>
 

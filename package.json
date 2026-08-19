@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint . && node scripts/check-copy.mjs",
+    "preview": "vite preview",
+    "check:copy": "node scripts/check-copy.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

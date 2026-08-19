@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 /**
  * Sizes are set for hands that may not be steady: every size is at least 44px
  * tall and the default is 48px. Focus is left to the global `:focus-visible`
- * outline in index.css rather than a ring here, so it can never be suppressed
- * — which is why this deliberately does not set `outline-none`.
+ * outline in index.css rather than a ring here, so it can never be suppressed.
+ * That is why this deliberately does not set `outline-none`.
  */
 const buttonVariants = cva(
   "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-colors select-none disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5",

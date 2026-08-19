@@ -9,9 +9,12 @@ export function GetInvolved() {
 
       <Prose className="mt-10">
         <p className="text-muted-foreground">
-          Project Banyan is just getting started. Whether you are a patient, a
-          carer, a clinician, a researcher, or simply someone who cares — there
-          is a place for you here.
+          Project Banyan is just getting started. Maybe you have Parkinson's.
+          Maybe you care for someone who does. Maybe you are a doctor or a
+          scientist. Maybe you just want to help.
+        </p>
+        <p className="mt-5 text-muted-foreground">
+          There is a place for you here.
         </p>
       </Prose>
     </Section>
